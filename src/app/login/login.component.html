@@ -1,0 +1,26 @@
+<ActionBar title="Qurioseaty"></ActionBar>
+
+<FlexboxLayout>
+  <StackLayout class="form">
+    <Image src="~/assets/images/logo.png"></Image>
+
+    <TextField hint="Email Address" keyboardType="email"
+    autocorrect="false" autocapitalizationType="none"
+    [(ngModel)]="user.email" class="input input-border"></TextField>
+  <TextField hint="Password" secure="true"
+    [(ngModel)]="user.password" class="input input-border"></TextField>
+
+      <Button [text]="isLoggingIn ? 'Sign in' : 'Sign up'"
+      class="btn btn-primary" (tap)="submit()"></Button>
+    <Button [text]="isLoggingIn ? 'Sign up' : 'Back to login'"
+      (tap)="toggleDisplay()"></Button>
+
+      <!-- <ng-template #name></ng-template> -->
+      <!-- <ng-template #name></ng-template> -->
+      <FlexboxLayout height="100" flexDirection="row" width="230">
+        <Image class="m-5" src="~/assets/images/insta.png" (tap)="onInsta()"></Image>
+        <Image class="m-5" src="~/assets/images/google.png" (tap)="onGoogle()"></Image>
+        <Image class="m-5" src="~/assets/images/fb.png" (tap)="onFb()"></Image>
+    </FlexboxLayout>
+  </StackLayout>
+</FlexboxLayout>
